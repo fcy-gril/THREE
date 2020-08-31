@@ -1,0 +1,318 @@
+.container .header{
+    width: 100%;
+    height: 30px;
+    background: #f4f4f4;
+}
+.container .header .header-con{
+    width: 1200px;
+    height: 100%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    line-height: 30px;
+    /* background: fuchsia; */
+}
+.container .header .header-con .header_right{
+     width: 40%;
+     display: flex;
+     justify-content: space-between;
+     /* background: greenyellow; */
+}
+/* 搜索区域 */
+ .search-con{
+     width: 1200px;
+     height: 150px;
+     background: pink;
+     margin: 0 auto;
+     display: flex;
+ }
+  .search_left{
+     width: 20%;
+     height: 100%;
+     /* background: red; */
+    
+ }
+  .search_left img{
+     width: 50%;
+     height: 50%;
+     margin: 15% auto;
+ }
+  .search_right{
+     /* background: skyblue; */
+     width: 80%;
+     height: 150;
+     display: flex;
+     flex-direction: column;
+     padding-top: 25px;
+     padding-bottom: 10px;
+ }
+ /* 最上方input搜索框区域 */
+  .search_right .search_right_top{
+     display: flex;
+     height: 30px;
+     width: 600px;
+     /* background: burlywood; */
+     padding-left: 50px;
+      
+ }
+  .search_right .search_right_top input{
+      width: 350px;
+      height: 30px;
+      padding-left: 20px;
+      border: 2px solid red;
+    }
+    /* button外面包的div */
+     .search_right .search_right_top1{
+        height: 30px;
+        border: 2px solid red;
+        background: red;
+    }
+    /* button按钮 */
+     .search_right .search_right_top .search_right_top1 button{
+      border: none;
+      height: 30px;
+      background: red;
+      line-height: 30px;
+
+    }
+     .search_right .search_right_top .search_right_top1 button span{
+        color: white;
+    }
+
+    /* 购物车部分 */
+     .search_right .search_right_top .buyCar{
+        margin-left: 25px;
+        line-height: 30px;
+        border: 1px solid #f4f4f4;
+        display: flex;
+        justify-content: center;
+        width: 100px;
+        height: 30px;
+        font-size: 10px;
+    }
+    .search_right .search_right_top .buyCar button{
+        border: none;
+        background: none;
+    }
+     .search_right .search_right_top .buyCar span:nth-child(1){
+        color: red;
+        font-size: 12px;
+        margin-right: 5px;
+    } .search_right .search_right_top .buyCar span:nth-child(2){
+        color: red;
+        font-size: 10px;
+    }
+
+
+    /* 中间部分 */
+    .search-con .search_right .search_right_middle{
+        height: 20px;
+        width: 350px;
+        /* background: chartreuse; */
+        display: flex;
+        padding-left: 50px;
+        font-size: 10px;
+        margin-bottom: 30px;
+        margin-top: 5px;
+        
+    }
+    /* .search-con .search_right .search_right_middle ul{
+        display: flex;
+        justify-content: space-between;
+    } */
+    .search-con .search_right .search_right_middle li{
+        float: left;
+       
+    }
+    .search-con .search_right .search_right_middle li a{
+        line-height: 20px;
+        margin-right: 8px;
+        color: black;
+        font-size: 10px;
+    }
+    /* 下面部分 */
+    .search-con .search_right .search_right_bottom{
+        display: flex;
+        padding-left: 10px;
+        
+    }
+    .search-con .search_right .search_right_bottom li{
+        float: left;
+    }
+    .search-con .search_right .search_right_bottom li a{
+        
+        margin-right: 15px;
+        font-size: 14px;
+        color: black;
+    }
+
+ 
+  
+
+
+
+
+
+
+
+
+
+/* 登录，注册底部部分 */
+.footer{
+    width: 1200px;
+    height: 100%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    line-height: 30px;
+    /* background: burlywood; */
+    margin-bottom: 10px;
+    
+}
+.footer>ul{
+    display: flex;
+    flex-direction: row;
+    list-style: none;
+    /* justify-content: space-around; */
+    margin-left: 20px;
+}
+.footer>ul>li{
+    width: 100%;
+    display: flex;
+    /* justify-content: space-around; */
+    /* border-right: 1px solid black; */
+    /* height: 14px; */
+    /* background: red; */
+    
+    
+}
+.footer>ul>li>a{
+    font-size: 14px;
+    /* height: 100%; */
+    color: rgb(102, 102, 102);
+    /* background: chartreuse;  */
+    text-decoration: none;
+    display: flex;
+    /* justify-content: space-between; */
+    margin: 0px 17px 0 17px;
+    padding: 0 8px;
+    
+}
+.footer>ul>li>span{
+    color: #999;
+}
+.footer_p{
+    width: 1200px;
+    height: 100%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    font-size: 14px;
+}
+/* 首页的底部区域 */
+.foot{
+    height: 500px;
+    width: 100%;
+    background: #f4f4f4;
+    border-top: 1px solid #999;
+    padding-top: 20px;
+}
+.foot-con{
+    width: 1200px;
+    height: 500px;
+    margin: 0 auto ;
+    /* background: yellow; */
+    /* display: flex;
+    flex-direction: row; */
+}
+/* 上面6个区域ul */
+.foot-con>.foot_top{
+    display: flex;
+    flex-direction: row;
+    min-height: 180px;
+    /* background: coral; */
+    border-bottom: 1px solid #999;
+    margin-bottom: 20px;
+
+}
+.foot-con>.foot_top>.foot_address{
+    width: 15%;
+    /* background: red; */
+    position: relative;
+}
+.foot-con>.foot_top>.foot_address>span{
+    font-size: 14px;
+    margin-left: 15%;
+    /* margin-bottom: 20px; */
+    
+}
+.foot-con>.foot_top>.foot_address>p{
+    font-size: 10px;
+    color: rgb(102, 102, 102);
+    margin: 10px 0 5px 0;
+   
+
+    
+}
+.foot-con>.foot_top>.foot_address>a{
+    font-size: 10px;
+   
+    position: absolute;
+    left: 70%;
+    color: rgb(102, 102, 102);
+}
+.foot-con>.foot_top>.foot_one{
+    width: 18%;
+    /* background: greenyellow; */
+}
+/* a链接第一个作为标题，和下面a不同 */
+.foot-con>.foot_top>.foot_one>ul>li>.first{
+    font-size: 14px;
+    margin-bottom: 10px;
+
+}
+.foot-con>.foot_top>.foot_one>ul>li>a{
+    font-size: 10px;
+    color: rgb(102, 102, 102);
+}
+
+
+/* 最底部区域 */
+.footer_bottom{
+    width: 100%;
+    height: 100%;
+    /* background: burlywood; */
+    
+}
+.footer_bottom>.list1{
+    /* background: yellow; */
+    /* margin-bottom: 100px; */
+    width: 1000px; 
+    height: 30px;
+    margin: 0 auto;
+    display: flex;
+    /* flex-direction: column; */
+    justify-content: center;
+
+    
+}
+.footer_bottom>.list1>ul{
+    /* display: flex;
+    flex-direction: row; */
+}
+.footer_bottom>.list1>ul>li{
+    float: left;
+}
+.footer_bottom>.list1>ul>li>a{
+    color: rgb(102, 102, 102);
+    font-size: 12px;
+    margin: 0 5px;
+    
+}
+.footer_bottom>.list1>ul>li>a:hover{
+    color: red;
+}
+.footer_bottom>.list1>ul>li>span{
+    color: rgb(102, 102, 102);
+    font-size: 12px;
+}

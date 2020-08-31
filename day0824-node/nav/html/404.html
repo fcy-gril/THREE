@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        span{
+            color: #ff0000;
+        }
+        p{
+            text-align: center;
+        }
+
+    </style>
+</head>
+<body>
+    <p>
+        <span id="time">3</span>秒之后，跳转到首页面...
+    </p>
+
+    <script>
+       var second = 3;
+        //2.1定义一个方法，获取span标签，修改span标签体内容，时间...
+        var time = document.getElementById("time");
+        function showTime() {
+            second --;
+            //判断时间如果<=0，则跳转到指定页面
+            if (second <= 0) {
+                //跳转到指定页面
+                window.location.href = "http://127.0.0.1：8080/nav.html";
+            }
+            time.innerHTML = second + "";
+        }
+ 
+        //2.2 定义一个定时器，1秒执行一次该方法
+        setInterval(showTime,1000);
+
+    </script>
+</body>
+</html>

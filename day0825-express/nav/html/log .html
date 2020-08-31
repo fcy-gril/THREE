@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>登陆页面</title>
+    <link rel="stylesheet" href="../iconfont/iconfont.css">
+    <link rel="stylesheet" href="../css4/public.css?vt=1">
+    <link rel="stylesheet" href="../css4/log.css">
+    
+</head>
+<body>
+     <!-- 头部 -->
+     <div class="header">
+        <div class="header-con">
+            <!-- 左半部分 -->
+            <div class="header_left">
+                <div class="header_img">
+                    <img src="../images/1.jpg" alt="">
+                </div>            
+                <span>京东</span>
+                <span>欢迎登录</span>
+            </div>
+            <!-- 右半部分 -->
+            <div class="header_right">
+                <span></span>
+                <a href="#" class="header_right_a">登陆页面，调查问卷</a>
+            </div>
+            
+        </div>
+    </div>
+    <!-- 登录部分 -->
+    <div class="login">
+        <img src="" alt="">
+        <div class="login-con">
+            <!-- 上方分界区域 -->
+            <div class="splic">
+                <strong>扫码登录</strong>
+                <span>|</span>
+                <strong class="active">账户登录</strong>
+
+            </div>
+            <!-- 用户名 -->
+            <div class="manager">
+                <span class="iconfont icon-denglu"></span>
+                <input type="text" placeholder="用户名" name="username">
+            </div>
+            <!-- 密码 -->
+            <div class="manager">
+                <span class="iconfont  icon-mima"></span>
+                <input type="password" placeholder="密码" name="password">
+            </div>
+            <a href="" class="password">忘记密码</a>
+            <!-- button按钮 -->
+            <button>登录</button>
+            <!-- <div class="last">
+                <strong>QQ</strong>
+                <strong>微信</strong>
+                
+                <a href="">立即注册</a>
+
+            </div> -->
+           
+        </div>
+       
+    </div>
+    <!-- 底部 -->
+    <div class="footer">
+        <ul>
+            <li>
+                <a href="">关于我们</a>
+                <span>|</span>
+            </li>
+            <li>
+                <a href="">联系我们</a>
+                <span>|</span>
+            </li>
+            <li>
+                <a href="">人才招聘</a>
+                <span>|</span>
+            </li>
+            <li>
+                <a href="">商家入驻</a>
+                <span>|</span>
+            </li>
+            <li>
+                <a href="">广告服务</a>
+                <span>|</span>
+            </li>
+            <li>
+                <a href="">手机京东</a>
+                <span>|</span>
+            </li>
+            <li>
+                <a href="">友情链接</a>
+                <span>|</span>
+            </li>
+            <li>
+                <a href="">销售联盟</a>
+                <span>|</span>
+            </li>
+            <li>
+                <a href="">京东社区</a>
+                <span>|</span>
+            </li>
+            <li>
+                <a href="">京东公益</a>
+                <span>|</span>
+            </li>
+        </ul>
+        
+    </div>
+    <p class="footer_p">Copyright © 2004-2020  京东JD.com 版权所有</p>
+        
+    <!-- <a href="../server/goods_login.php"></a> -->
+    <script src="../js/jquery.min.js"></script>
+    <script src="../js/tools.js"></script>
+    <script>
+        const oIptName = document.querySelector('[name="username"]');
+        const oIptPwd = document.querySelector('[name="password"]');
+        const oBtn = document.querySelector('button');
+        oBtn.addEventListener('click',()=>{
+            let oIptNameVal = oIptName.value;
+            let oIptPwdVal = oIptPwd.value;
+            $.ajax({
+                url:'../server/goods_login.php',
+                type:'post',
+                data:{ userName: oIptNameVal, userPwd: oIptPwdVal },
+                dataType:'json',
+                success:result=>{
+                    if(result.res === 1){
+                        mySetCookie('login', 1, 7 * 24 * 60 * 60);
+                        window.alert('登录成功,点击确定,从哪里来就回到哪里去');
+                        let url =  decodeURI(window.location.search).substr( decodeURI( window.location.search ).indexOf('=')+1 );
+                        console.log( window.location.search)
+                        console.log(url)
+                        window.location.href=url;
+                    }else{
+                        window.alert('登录失败,请您检查账号密码,继续玩命登录')
+                    }
+                }
+
+            })
+        })
+    </script>
+</body>
+</html>

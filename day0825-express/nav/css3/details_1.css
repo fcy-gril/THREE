@@ -1,0 +1,202 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+#top{
+    width: 100%;
+    height: 30px;
+    background: #f4f4f4;
+}
+.header{
+    width: 100%;
+    height: 30px;
+    background: #f4f4f4;
+}
+.header .header-con{
+    width: 1200px;
+    height: 100%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    line-height: 30px;
+    /* background: fuchsia; */
+}
+ .header .header-con .header_right{
+     width: 40%;
+     display: flex;
+     justify-content: space-between;
+     /* background: greenyellow; */
+}
+/* 搜索区域 */
+ .search-con{
+     width: 1200px;
+     height: 150px;
+     /* background: pink; */
+     margin: 0 auto;
+     display: flex;
+ }
+  .search_left{
+     width: 20%;
+     height: 100%;
+     /* background: red; */
+    
+ }
+  .search_left img{
+     width: 60%;
+     height: 70%;
+     margin: 20px auto;
+ }
+  .search_right{
+     /* background: skyblue; */
+     width: 80%;
+     height: 150px;
+     display: flex;
+     flex-direction: column;
+     justify-content: center;
+     padding-top: 30px;
+     padding-bottom: 10px;
+     margin-left: 45px;
+ }
+ /* 最上方input搜索框区域 */
+  .search_right .search_right_top{
+     display: flex;
+     height: 30px;
+     width: 600px;
+     /* background: burlywood; */
+     padding-left: 50px;
+      
+ }
+ .search_right_top_one{
+     width: 403px;
+     height: 100%;
+     /* background: mediumaquamarine; */
+ }
+  .search_right .search_right_top input{
+      /* float: left; */
+      width: 360px;
+      height: 30px;
+      /* padding-left: -100px; */
+      border: 2px solid red;
+    }
+   
+    /* a按钮 */
+     .search_right .search_right_top  a{
+      /* float: left; */
+      height: 30px;
+      width: 40px;
+      background: red;
+      line-height: 30px;
+      border: 2px solid red;
+
+    }
+     .search_right .search_right_top  a span{
+        color: white;
+    }
+
+    /* 购物车部分 */
+     .search_right .search_right_top .buyCar{
+        margin-left: 25px;
+        line-height: 30px;
+        border: 1px solid #f4f4f4;
+        display: flex;
+        justify-content: center;
+        width: 100px;
+        height: 30px;
+        font-size: 10px;
+    }
+    .search_right .search_right_top .buyCar button{
+        border: none;
+        background: none;
+    }
+     .search_right .search_right_top .buyCar span:nth-child(1){
+        color: red;
+        font-size: 12px;
+        margin-right: 5px;
+    } .search_right .search_right_top .buyCar span:nth-child(2){
+        color: red;
+        font-size: 10px;
+    }
+
+
+    /* 中间部分 */
+    .search-con .search_right .search_right_middle{
+        height: 20px;
+        width: 350px;
+        /* background: chartreuse; */
+        display: flex;
+        padding-left: 50px;
+        font-size: 10px;
+        margin-bottom: 30px;
+        margin-top: 5px;
+        
+    }
+    /* .search-con .search_right .search_right_middle ul{
+        display: flex;
+        justify-content: space-between;
+    } */
+    .search-con .search_right .search_right_middle li{
+        float: left;
+       
+    }
+    .search-con .search_right .search_right_middle li a{
+        line-height: 20px;
+        margin-right: 8px;
+        color: black;
+        font-size: 10px;
+    }
+    /* 下面部分 */
+    .search-con .search_right .search_right_bottom{
+        display: flex;
+        padding-left: 10px;
+        
+    }
+    .search-con .search_right .search_right_bottom li{
+        float: left;
+    }
+    .search-con .search_right .search_right_bottom li a{
+        
+        margin-right: 15px;
+        font-size: 14px;
+        color: black;
+    }
+
+
+    /* 中间黑色区域 */
+    .content_list{
+        width: 100%;
+        height: 29px;
+        background: black;
+        margin-bottom: 10px;
+    }
+    .content_list_center{
+        width: 1200px;
+        height: 29px;
+        margin: 0 auto;
+        /* background: pink; */
+    }
+    .content_list_center>.content_list_box{
+        width: 1000px;
+        height: 29px;
+        margin: 0 auto;
+        /* background: yellow; */
+        display: flex;
+        justify-content: space-between;
+    }
+    .content_list_center>.content_list_box>ul>li{
+       
+       float: left;
+       line-height: 29px;
+    }
+    .content_list_center>.content_list_box>ul>li>a{
+        margin-right: 25px;
+        color: #fff;
+
+    }
+    .content_list_center>.content_list_box>input{
+        border-radius: 50px;
+        padding-left: 10px;
+        font-size: 14px;
+    }
+
+
+  
