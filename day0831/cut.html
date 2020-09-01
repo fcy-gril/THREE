@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- 容器 -->
+    <div id="app">
+        <div id="msg"></div>
+        <input type="text" oninput="changevalue(this)">
+    </div>
+    <script>
+        // 数据源
+        var userinfo = {
+            name:'张三我是一只快乐的小蜜蜂'
+        }
+        // 空对象用于劫持数据用
+        const obj = {};
+        Object.defineProperty(obj,'name',{
+            // 获取数据时触发
+            get(){
+                // 截取上方数据源userinfo里面的索引下标从0起的三位
+                // return userinfo.name.substr(0,3);//数值是张三我
+                return userinfo.name//结果是张三我是一只快乐的小蜜蜂
+            },
+            // 修改数据时触发
+            set(data){
+                userinfo.name = data;
+                document.querySelector('#msg').innerHTML = data
+                // 必须写，不然在严格模式下会报错
+                return true;
+            }
+        })
+
+        // 开始时渲染数据
+        document.querySelector('#msg').innerHTML = obj.name//结果是张三我是一只快乐的小蜜蜂
+        // 在input输入框中输入数据时，下面这个函数就能得到触发
+        function changevalue(elobj){
+            // 获取input输入框中的数据
+            let value = elobj.value;
+            // 将输入框的数据重新赋值回去，再从set中走一遍
+            obj.name = value;
+        }
+
+
+
+
+
+
+
+
+        // console.log(userinfo.name)//值是张三我是一只快乐的小蜜蜂
+        // console.log(obj.name)//值是return的返回值张三我
+        // // 修改数据
+        // obj.name = 'abcdefg'
+        // console.log(obj.name)//值是abc
+
+    </script>
+</body>
+</html>

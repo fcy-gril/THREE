@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- 2.创建一个vue管理的容器 -->
+    <div id="app"></div>
+</head>
+<body>
+    <!-- 1.引入vue文件 -->
+    <script src="./lib/vue.js"></script>
+    <script>
+        // 3.实例化对象
+        const app = new Vue({
+            el:'#app',
+            data:{
+                username:'张三'
+            }
+        })
+    </script>
+</body>
+</html>
